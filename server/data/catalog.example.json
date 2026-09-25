@@ -1,0 +1,13 @@
+{
+  "materias": [
+    {
+      "id": "ti-administracion-2026-1",
+      "nombre": "Tecnologías de la Información",
+      "carrera": "Licenciatura en Administración",
+      "periodo": "2026-1",
+      "modo": "ampliado",
+      "activa": true
+    }
+  ],
+  "fuentes": []
+}

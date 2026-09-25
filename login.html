@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#075d68">
+  <title>Acceso docente · LIA</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <main class="login-shell">
+    <section class="login-card" aria-labelledby="loginTitle">
+      <a class="login-brand" href="index.html"><img src="assets/logo-lia.png" alt="LIA"></a>
+      <p class="eyebrow">Área protegida</p>
+      <h1 id="loginTitle">Acceso docente</h1>
+      <p class="intro">Ingresa para administrar materias y fuentes académicas.</p>
+      <form id="loginForm" class="login-form">
+        <label>Usuario<input id="username" name="username" autocomplete="username" required maxlength="100"></label>
+        <label>Contraseña<input id="password" name="password" type="password" autocomplete="current-password" required maxlength="200"></label>
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="loginMessage" class="login-message" role="alert" aria-live="polite"></p>
+      <a class="back-link" href="index.html">← Volver a LIA</a>
+    </section>
+  </main>
+  <script src="js/login.js"></script>
+</body>
+</html>

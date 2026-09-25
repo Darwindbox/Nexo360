@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#075d68">
+  <title>Administración docente · LIA</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <a href="../index.html" class="admin-brand"><img src="../assets/logo-lia.png" alt="LIA"><span><strong>Administración docente</strong><small>Conocimiento y materias</small></span></a>
+    <div class="header-actions">
+      <a href="../index.html" class="back-link">← Volver a LIA</a>
+      <button type="button" id="logoutButton" class="logout-button">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-intro">
+      <div><p class="eyebrow">Prototipo local</p><h1>Centro de conocimiento</h1><p>Organiza materias, periodos y fuentes académicas. Con el servidor de LIA activo, los cambios quedan guardados permanentemente en el proyecto.</p></div>
+      <div class="status-group">
+        <div class="admin-status" id="storageStatus"><span></span>Comprobando almacenamiento…</div>
+        <div class="admin-status admin-status--muted"><span></span>IA desconectada</div>
+      </div>
+    </section>
+
+    <div class="admin-layout">
+      <section class="panel" aria-labelledby="subjectTitle">
+        <div class="panel-heading"><div><p class="eyebrow">Configuración</p><h2 id="subjectTitle">Materias</h2></div><span id="subjectCount"></span></div>
+        <form id="subjectForm" class="admin-form">
+          <label>Nombre de la materia<input id="subjectName" required maxlength="100" placeholder="Ej. Sistemas de Información"></label>
+          <div class="form-row"><label>Carrera<input id="subjectProgram" required maxlength="100" placeholder="Licenciatura en Administración"></label><label>Periodo<input id="subjectPeriod" required maxlength="30" placeholder="2026-2"></label></div>
+          <label>Modo de asistencia<select id="subjectMode"><option value="estricto">Estricto · solo materiales</option><option value="ampliado" selected>Ampliado · materiales y conocimiento general</option><option value="investigacion">Investigación · incluye búsqueda web</option><option value="evaluacion">Evaluación · ayuda restringida</option></select></label>
+          <button type="submit" class="primary-button">Agregar materia</button>
+        </form>
+        <div class="record-list" id="subjectList"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="sourceTitle">
+        <div class="panel-heading"><div><p class="eyebrow">Biblioteca</p><h2 id="sourceTitle">Fuentes</h2></div><span id="sourceCount"></span></div>
+        <form id="sourceForm" class="admin-form">
+          <label>Materia<select id="sourceSubject" required></select></label>
+          <label>Título<input id="sourceTitleInput" required maxlength="140" placeholder="Título del recurso"></label>
+          <div class="form-row"><label>Tipo<select id="sourceType"><option>Libro</option><option>Presentación</option><option>Página web</option><option>Video</option><option>Apuntes</option></select></label><label>Unidad<input id="sourceUnit" required maxlength="50" placeholder="Unidad 1"></label></div>
+          <label>Enlace o ruta<input id="sourceUrl" required maxlength="500" placeholder="https://… o assets/materiales/archivo.pdf"></label>
+          <label>Descripción<textarea id="sourceDescription" required maxlength="260" rows="3" placeholder="Explica brevemente qué contiene"></textarea></label>
+          <button type="submit" class="primary-button">Agregar fuente</button>
+        </form>
+        <div class="record-list" id="sourceList"></div>
+      </section>
+    </div>
+
+    <section class="policy-panel">
+      <div><p class="eyebrow">Política permanente</p><h2>Integridad académica</h2><p>LIA orienta, explica y revisa avances; no realiza tareas, trabajos ni evaluaciones en lugar de los estudiantes.</p></div>
+      <button type="button" id="resetCatalog" class="secondary-button">Restablecer datos iniciales</button>
+    </section>
+    <p class="save-message" id="saveMessage" role="status" aria-live="polite"></p>
+  </main>
+  <script src="../data/catalogo.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

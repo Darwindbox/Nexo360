@@ -1,0 +1,14 @@
+{
+  "name": "lia-asistente-academica",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Prototipo local de LIA con catálogo académico persistente.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "check": "node --check server/server.js && node --check server/smoke-test.js && node --check js/lia.js && node --check js/admin.js && node --check js/login.js && node --check data/catalogo.js",
+    "test": "node server/smoke-test.js"
+  }
+}

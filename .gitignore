@@ -1,0 +1,19 @@
+# Dependencias y configuración privada
+node_modules/
+.env
+.env.*
+!.env.example
+
+# Datos que cambian durante el uso
+server/data/catalog.json
+server/data/*.tmp
+
+# Materiales académicos locales: se publicarán después en almacenamiento privado
+assets/materiales/*
+!assets/materiales/.gitkeep
+
+# Archivos del sistema y registros
+*.log
+.DS_Store
+Thumbs.db
+
