@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LIA, Asistente Académica Inteligente para Tecnologías de la Información.">
+  <meta name="theme-color" content="#075d68">
+  <title>LIA · Asistente Académica Inteligente</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23075d68'/%3E%3Cpath d='M18 15v30h24v-7H26V15z' fill='%235eead4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/lia.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="brand">
+        <img src="assets/logo-lia.png" alt="LIA, Asistente Académica Inteligente" class="brand__logo">
+      </div>
+
+      <nav class="nav-list">
+        <a class="nav-link active" href="#inicio" aria-current="page"><span aria-hidden="true">⌂</span>Inicio</a>
+        <a class="nav-link" href="#chat"><span aria-hidden="true">✦</span>Preguntar</a>
+        <a class="nav-link" href="#temas"><span aria-hidden="true">▤</span>Temas del curso</a>
+        <a class="nav-link" href="#ejercicios"><span aria-hidden="true">✓</span>Ejercicios</a>
+        <a class="nav-link" href="#materiales"><span aria-hidden="true">◇</span>Materiales</a>
+        <a class="nav-link" href="#consultas"><span aria-hidden="true">◷</span>Mis consultas</a>
+        <a class="nav-link nav-link--about" href="#acerca"><span aria-hidden="true">i</span>Acerca de LIA</a>
+        <a class="nav-link" href="admin/index.html"><span aria-hidden="true">⚙</span>Administración docente</a>
+      </nav>
+
+      <div class="sidebar__status"><span></span>Asistente académica</div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">☰</button>
+        <div class="course-label">
+          <span>Tecnologías de la Información</span>
+          <small>Licenciatura en Administración</small>
+          <strong>Mtro. Darwin C. Rojas Ramírez</strong>
+        </div>
+        <div class="profile-chip" aria-label="Perfil de LIA"><img src="assets/avatar-lia.png" alt="Avatar de LIA"><span>En línea</span></div>
+      </header>
+
+      <div class="workspace">
+        <section class="welcome" id="inicio" aria-labelledby="welcomeTitle">
+          <div class="welcome__copy">
+            <p class="eyebrow">Tu espacio de aprendizaje</p>
+            <h1 id="welcomeTitle"><span id="typedGreeting" aria-label="Hola, soy LIA, tu asistente académica."></span><span class="typing-cursor" aria-hidden="true"></span></h1>
+            <p>Explora conceptos, practica y resuelve tus dudas sobre la asignatura a tu propio ritmo.</p>
+          </div>
+          <img src="assets/avatar-lia.png" alt="Retrato de LIA, asistente académica" class="welcome__avatar">
+        </section>
+
+        <section class="quick-section" aria-labelledby="quickTitle">
+          <div class="section-heading"><div><p class="eyebrow">Comienza por aquí</p><h2 id="quickTitle">¿Cómo puedo ayudarte?</h2></div><span>Elige una opción o escribe tu pregunta</span></div>
+          <div class="quick-grid">
+            <button class="quick-card" type="button" data-prompt="Explícame un tema de Tecnologías de la Información"><b aria-hidden="true">Aa</b><span><strong>Explicar un tema</strong><small>Comprende conceptos paso a paso</small></span><i aria-hidden="true">→</i></button>
+            <button class="quick-card" type="button" data-prompt="Dame ejemplos prácticos"><b aria-hidden="true">{ }</b><span><strong>Dar ejemplos</strong><small>Conecta la teoría con casos reales</small></span><i aria-hidden="true">→</i></button>
+            <button class="quick-card" type="button" data-prompt="Crea ejercicios para practicar"><b aria-hidden="true">✎</b><span><strong>Crear ejercicios</strong><small>Pon a prueba lo aprendido</small></span><i aria-hidden="true">→</i></button>
+            <button class="quick-card" type="button" data-prompt="Ayúdame a resolver una duda"><b aria-hidden="true">?</b><span><strong>Resolver dudas</strong><small>Pregunta con total confianza</small></span><i aria-hidden="true">→</i></button>
+            <button class="quick-card" type="button" data-prompt="Necesito ayuda con una actividad"><b aria-hidden="true">✓</b><span><strong>Ayuda con actividades</strong><small>Recibe orientación para avanzar</small></span><i aria-hidden="true">→</i></button>
+          </div>
+        </section>
+
+        <section class="content-section" id="temas" aria-labelledby="topicsTitle">
+          <div class="section-heading">
+            <div><p class="eyebrow">Ruta de aprendizaje</p><h2 id="topicsTitle">Temas del curso</h2></div>
+            <span>Contenido inicial organizado a partir de los materiales</span>
+          </div>
+          <div class="topic-grid">
+            <article class="topic-card"><span>Unidad 1</span><h3>Herramientas tecnológicas para empresas</h3><p>Comunicación, proyectos, nube, ERP, análisis de datos y redes sociales.</p></article>
+            <article class="topic-card"><span>Unidad 2</span><h3>Inteligencia de negocios</h3><p>Transformación digital, Big Data, analítica, ciencia de datos y toma de decisiones.</p></article>
+          </div>
+        </section>
+
+        <section class="content-section" id="materiales" aria-labelledby="materialsTitle">
+          <div class="section-heading materials-heading">
+            <div><p class="eyebrow">Biblioteca académica</p><h2 id="materialsTitle">Materiales</h2></div>
+            <label class="material-filter">Materia
+              <select id="materialCourseFilter" aria-label="Filtrar materiales por materia"></select>
+            </label>
+          </div>
+          <div class="materials-grid" id="materialsGrid" aria-live="polite"></div>
+          <p class="empty-state" id="materialsEmpty" hidden>No hay materiales activos para esta materia.</p>
+        </section>
+
+        <section class="chat-panel" id="chat" aria-labelledby="chatTitle">
+          <div class="chat-panel__header"><div><span class="avatar-mini"><img src="assets/avatar-lia.png" alt=""></span><div><h2 id="chatTitle">Conversa con LIA</h2><p><span class="online-dot"></span>Lista para ayudarte</p></div></div><button id="clearChat" class="clear-button" type="button" title="Limpiar conversación">Limpiar</button></div>
+          <div class="conversation" id="conversation" role="log" aria-live="polite" aria-label="Conversación con LIA">
+            <div class="message message--lia"><span class="avatar-mini"><img src="assets/avatar-lia.png" alt=""></span><div><strong>LIA</strong><p>¡Hola! ¿Qué te gustaría aprender hoy?</p></div></div>
+          </div>
+          <form class="chat-form" id="chatForm">
+            <label class="sr-only" for="questionInput">Escribe tu pregunta</label>
+            <textarea id="questionInput" rows="1" maxlength="500" placeholder="Escribe tu pregunta aquí…" required></textarea>
+            <button type="submit" aria-label="Enviar pregunta"><span>Enviar</span><i aria-hidden="true">➤</i></button>
+          </form>
+          <p class="chat-note">LIA puede cometer errores. Verifica la información importante y conserva la autoría de tus trabajos.</p>
+        </section>
+
+        <section class="integrity-panel" id="acerca" aria-labelledby="integrityTitle">
+          <div class="integrity-panel__mark" aria-hidden="true">✓</div>
+          <div><p class="eyebrow">Compromiso académico</p><h2 id="integrityTitle">LIA acompaña, orienta y enseña</h2><p>No realiza tareas ni evaluaciones en lugar del estudiante. Puede explicar, ofrecer pistas, revisar avances y ayudar a comprender los temas respetando siempre la autoría y el esfuerzo personal.</p></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div class="overlay" id="overlay" hidden></div>
+  <script src="data/catalogo.js"></script>
+  <script src="js/lia.js"></script>
+</body>
+</html>
